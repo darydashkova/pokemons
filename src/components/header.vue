@@ -5,6 +5,7 @@
         <router-link to="/" exact>{{ home }}</router-link>
         <router-link to="/history">{{ history }}</router-link>
         <router-link to="/contacts">{{ contacts }}</router-link>
+        <router-link to="/PokemonApi">{{ PokemonApi }}</router-link>
       </nav>
     </div>
   </div>
@@ -17,7 +18,8 @@ export default {
     return {
       home: 'home',
       history: 'history',
-      contacts: 'contacts'
+      contacts: 'contacts',
+      PokemonApi: 'PokemonApi'
     }
   }
 }
