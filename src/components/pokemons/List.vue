@@ -51,16 +51,6 @@ export default {
       pokemonsnew: [],
       UrlIdLookUp: {},
     });
-    fetch(" https://pokeapi.co/api/v2/pokemon?offset=0")
-      .then((res) => res.json())
-      .then((data) => {
-        state.pokemonsnew = data.results;
-        state.UrlIdLookUp = data.results.reduce(
-          (acc, cur, inx) => (acc = { ...acc, [cur.name]: inx + 1 }),
-          {}
-        );
-      });
-    console.log(state);
     const clikedPokemons = ref([]);
     const pokemonClickHandler = (data) => {
       if (!data.show) {
